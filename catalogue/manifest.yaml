@@ -35,7 +35,7 @@ spec:
         project: roboshop
         tier: app
     spec:
-      conatiners:
+      containers:
       - name: catalogue
         image: monnishreddy2003/catalogue:v1
         envFrom:
