@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Configmap
 metadata:
   name: catalogue
-  Namespace: roboshop
+  namespace: roboshop
   labels:
     component: catalogue
     project: roboshop
@@ -16,7 +16,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: catalogue
-  Namespace: roboshop
+  namespace: roboshop
   labels:
     component: catalogue
     project: roboshop
@@ -46,7 +46,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: catalogue
-  Namespace: roboshop
+  namespace: roboshop
   labels:
     component: catalogue
     project: roboshop
