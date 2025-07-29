@@ -1,0 +1,27 @@
+# mongodb ,depends on catalogue and user 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb
+  labels:
+    component: mongodb
+    project: roboshop
+    tier: database
+spec:
+  replicas: 1
+  selector:
+  # these are replica variables to create replicas it should match the pod labels
+    matchLabels:
+      component: mongodb
+      project: roboshop
+      tier: database
+      #this is pod defination
+  template:
+    metadata:
+      component: mongodb
+      project: roboshop
+      tier: database
+    spec:
+      containers:
+      - name: mongodb
+        image: monnishreddy2003/mongodb:v1
